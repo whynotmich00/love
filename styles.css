@@ -1,0 +1,78 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: pink;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    position: relative;
+    text-align: center;
+}
+
+.heart {
+    width: 150px; /* Increased width */
+    height: 150px; /* Increased height */
+    background-color: red;
+    position: relative;
+    transform: rotate(-45deg);
+    margin: 50px auto;
+    display: flex;
+}
+
+/* Heart shape using pseudo-elements */
+.heart::before,
+.heart::after {
+    content: "";
+    position: absolute;
+    width: 150px; /* Increased width */
+    height: 150px; /* Increased height */
+    background-color: red;
+    border-radius: 50%;
+}
+
+.heart::before {
+    top: -75px; /* Adjusted to maintain the larger heart shape */
+    left: 0;
+}
+
+.heart::after {
+    left: 75px; /* Adjusted for the larger heart shape */
+    top: 0;
+}
+
+.lilita-one-regular {
+    font-family: "Lilita One", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+
+.name {
+    font-size: 4rem; /* Bigger text */
+    font-weight: bold;
+    color: white;
+    position: absolute;
+    top: -130px; /* Move text lower to avoid overlap */
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    font-family: 'Lilita One', cursive; /* Apply Lilita One font */
+    letter-spacing: 3px;
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
+}
+
+
+.signature {
+    position: fixed;
+    bottom: 10px;
+    left: 15px;
+    font-size: 1.2rem;
+    color: white;
+    font-style: italic;
+    opacity: 0.7; /* Makes it slightly transparent */
+}
+
